@@ -10,11 +10,11 @@ describe FixedArray do
     end
 
     it "raises an error if index is out of bounds for FixedArray#get" do
-      expect { fixedArray.get(11) }.to raise_error 'OutOfBoundsException'
+      expect { fixedArray.get(11) }.to raise_error FixedArray::OutOfBoundsException, "Error: Index out of bounds"
     end
 
     it "raises an error if index is out of bounds for FixedArray#set" do
-      expect { fixedArray.set(-4, "boo") }.to raise_error 'OutOfBoundsException'
+      expect { fixedArray.set(-4, "boo") }.to raise_error FixedArray::OutOfBoundsException, "Error: Index out of bounds"
     end
 
     it "sets the value at the index in the FixedArray and returns it" do
